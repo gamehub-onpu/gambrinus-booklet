@@ -196,10 +196,13 @@
                         case 'image':
                             if (imageFiles[i]) {
                                 // Объявляем плоскость под изображение
-                                if (i === 1) then 
+                                if (i === 1) {
                                   let geometry1 = new THREE.PlaneBufferGeometry(3, 2, 4, 4);
-                                if (i === 2) then 
-                                  let geometry1 = new THREE.PlaneBufferGeometry(2, 3, 4, 4);                           
+                                } else if (i === 2) { 
+                                  let geometry1 = new THREE.PlaneBufferGeometry(2, 3, 4, 4);
+                                } else if (i === 3) {
+                                  let geometry1 = new THREE.PlaneBufferGeometry(2, 3, 4, 4);
+                                }
                                 // Загружаем изображение
                                 let loader = new THREE.TextureLoader();
                                 let texture = loader.load(`${imageFiles[i]}`, render);
